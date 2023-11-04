@@ -23,6 +23,11 @@ public:
     {
         return diet;
     }
+
+    string generateDescription() {
+        return "I am a " + animal + " and I like to say " + noise + " and I'm a " + diet + ".";
+    }
+
 };
 
 class Cat : public Animal
@@ -64,6 +69,8 @@ int main()
     Dog dog;
     Pig pig;
 
+    cout << " " << endl;
+
     cout << "Noise: " << cat.getNoise() << endl;
     cout << "Noise: " << dog.getNoise() << endl;
     cout << "Noise: " << pig.getNoise() << endl;
@@ -79,4 +86,12 @@ int main()
     cout << "Diet: " << cat.getDiet() << endl;
     cout << "Diet: " << dog.getDiet() << endl;
     cout << "Diet: " << pig.getDiet() << endl;
+
+    cout << " " << endl;
+
+    cout << cat.generateDescription() << endl;
+    cout << dog.generateDescription() << endl;
+    cout << pig.generateDescription() << endl;
+
+    cout << " " << endl;
 }
